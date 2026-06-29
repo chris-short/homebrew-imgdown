@@ -1,25 +1,25 @@
 class Imgdown < Formula
   desc "Download images from URLs found in markdown files"
   homepage "https://github.com/chris-short/imgdown"
-  version "0.20260629.5"
+  version "0.20260629.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.5/imgdown-aarch64-apple-darwin.tar.xz"
-      sha256 "75726cb6c5f376bf839c8660518cd095e4cb07edcd2341a39b2b0d16aa037103"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-aarch64-apple-darwin.tar.xz"
+      sha256 "f4b86707dc2002dc5d49de2ae93cd6f3666869958ffbd44cfcfa1f80708f8bbb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.5/imgdown-x86_64-apple-darwin.tar.xz"
-      sha256 "c840549c6b600635b7b670bb6a48e973d813502634a38f3a619c94c949712265"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-x86_64-apple-darwin.tar.xz"
+      sha256 "a962f86bd796bf03c70878635042a6552d36bd5f468b6f0f5aefb43fa9de9afa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.5/imgdown-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2fb79f8004f355134867dc4475c8ba2f5adc12c3cee429dbb7f0befa6fee1a8e"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "efdbf03ecba5d9f276718eea4b074b7937d314a0c96c205facf8b8cec4d33a2d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.5/imgdown-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "443f1d7b6c64b0adae50fad66b9f85ed8c3b2e217fc856021a0173ee65d0522c"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "efb9583ad544025650fe901ef4a6682c073a1bcba1bc9f5abed9bafdba8ad9fb"
     end
   end
 
@@ -27,6 +27,7 @@ class Imgdown < Formula
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
     "x86_64-apple-darwin":       {},
+    "x86_64-pc-windows-gnu":     {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
