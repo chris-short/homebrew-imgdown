@@ -1,25 +1,25 @@
 class Imgdown < Formula
   desc "Download images from URLs found in markdown files"
   homepage "https://github.com/chris-short/imgdown"
-  version "0.20260629.7"
+  version "0.20260630.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-aarch64-apple-darwin.tar.xz"
-      sha256 "f4b86707dc2002dc5d49de2ae93cd6f3666869958ffbd44cfcfa1f80708f8bbb"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260630.8/imgdown-aarch64-apple-darwin.tar.xz"
+      sha256 "35fd3cfc91da95e575108d11b2d672d54525f38c6f57ca09eea3c006864a217e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-x86_64-apple-darwin.tar.xz"
-      sha256 "a962f86bd796bf03c70878635042a6552d36bd5f468b6f0f5aefb43fa9de9afa"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260630.8/imgdown-x86_64-apple-darwin.tar.xz"
+      sha256 "bcd68b6fedbdf03e6c621cd3631b0e12305d6b1685cbfc25f7a78fe6c65bf01e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "efdbf03ecba5d9f276718eea4b074b7937d314a0c96c205facf8b8cec4d33a2d"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260630.8/imgdown-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c814e31023475acd1c3644f50febbf5d1fe77b60480577f9cc25810e6765aca5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260629.7/imgdown-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "efb9583ad544025650fe901ef4a6682c073a1bcba1bc9f5abed9bafdba8ad9fb"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20260630.8/imgdown-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6f3eb15f4fe13d7f6932baadd39ee7dac03ef95ef1f457366b78e3e7d249a7be"
     end
   end
 
