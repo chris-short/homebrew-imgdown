@@ -1,25 +1,25 @@
 class Imgdown < Formula
   desc "Download images from URLs found in markdown files"
   homepage "https://github.com/chris-short/imgdown"
-  version "0.20260718.12"
+  version "0.20261103.13"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260718.12/imgdown-aarch64-apple-darwin.tar.xz"
-      sha256 "9224c26d8d366f7a6f0c0bd05c39189142af5046b3e8f9301677a8fd3cbaae61"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20261103.13/imgdown-aarch64-apple-darwin.tar.xz"
+      sha256 "c32921a85133810d29052426a79dbadc36787ef5574f9ed0b9505cfe9e786fd0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260718.12/imgdown-x86_64-apple-darwin.tar.xz"
-      sha256 "976c91d85c4449b701a28b6aa98f3019470a1c6ed25dd00a1b3555cd971833aa"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20261103.13/imgdown-x86_64-apple-darwin.tar.xz"
+      sha256 "fc21f9bbf0b48ed13e5db5b3ee42af250d5d7418557e4cd5e2348b1691caf061"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260718.12/imgdown-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b70bdd92d3c242526091e031b64bc5f7ba66be4a4dc363699d4e16cb88cd02e9"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20261103.13/imgdown-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "287fb65daac9b1b7bfd3d929a3f284d637ce73548ab250521034c63c53a2382a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/chris-short/imgdown/releases/download/v0.20260718.12/imgdown-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "68e04cd94cc8de15ba986c375d17f704503cc9fbff2746029cc0dcd4d2ffdc90"
+      url "https://github.com/chris-short/imgdown/releases/download/v0.20261103.13/imgdown-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "98e1dde9665452689db319ef24a967e513a96ca699caa71aeb83e0a434b789c2"
     end
   end
 
@@ -47,10 +47,18 @@ class Imgdown < Formula
   end
 
   def install
-    bin.install "imgdown" if OS.mac? && Hardware::CPU.arm?
-    bin.install "imgdown" if OS.mac? && Hardware::CPU.intel?
-    bin.install "imgdown" if OS.linux? && Hardware::CPU.arm?
-    bin.install "imgdown" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "imgdown"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "imgdown"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "imgdown"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "imgdown"
+    end
 
     install_binary_aliases!
 
